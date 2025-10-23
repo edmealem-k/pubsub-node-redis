@@ -97,6 +97,30 @@ Send a POST request to `http://localhost:3000/submit`:
 
 Both services include Dockerfiles for containerized deployment.
 
+### Using Docker Compose
+
+The easiest way to run the entire stack is with Docker Compose:
+
+```bash
+# Start all services (Redis + both backends)
+docker-compose up
+
+# Run in detached mode
+docker-compose up -d
+
+# Stop all services
+docker-compose down
+
+# Rebuild and start
+docker-compose up --build
+```
+
+This will start:
+
+- Redis server on port 6380
+- Primary backend on port 3000
+- Secondary backend on port 3001
+
 ## Development
 
 To run in development mode:
